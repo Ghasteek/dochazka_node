@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/month', (req, res) => {
-    res.send('This is a MONTH!!!')
+router.get('/new', (req, res) => {
+    res.render('month')
 })
 
 module.exports = router
