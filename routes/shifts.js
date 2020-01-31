@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Shift = require('../models/shift');
+const tools = require('../tools');
 
 // all shifts route
 router.get('/', async (req, res) => {
@@ -10,6 +11,9 @@ router.get('/', async (req, res) => {
     }
     try {
         const shifts = await Shift.find(searchOptions);
+        let remakedShifts = [];
+        //remakedShifts = tools.remakeShift(shifts);
+        //tools.remakeShift(shifts);
         res.render('shifts/index', { 
             shifts: shifts, 
             searchMonth: req.query.month,
@@ -32,11 +36,12 @@ router.get('/edit', (req, res) => {
 
 // Create shift route
 router.post('/', async (req, res) => {
+    //const newType = tools.multiply(req.body.type);
     const shift = new Shift({
-        date: req.body.date,
-        arrival: req.body.arrival,
-        departure: req.body.departure,
-        breakLength: req.body.breakLength,
+        date: tools.dateToInt(req.body.date),
+        arrival: tools.timeToMinutes(req.body.arrival),
+        departure: tools.timeToMinutes(req.body.departure),
+        breakLength: tools.timeToMinutes(req.body.breakLength),
         type: req.body.type
     });
     try {

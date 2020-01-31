@@ -2,35 +2,35 @@ const mongoose = require('mongoose');
 
 const shiftSchema = new mongoose.Schema({
     user: {
-        type: String,
+        type: Number,
         required: false 
     },
     date: {
-        type: String,
+        type: Number,
         required: true 
     },
     arrival: {
-        type: String,
+        type: Number,
         required: true 
     },
     departure: {
-        type: String,
+        type: Number,
         required: true 
     },
     breakLength: {
-        type: String,
+        type: Number,
         required: true 
     },
     shiftLength: {
-        type: String,
+        type: Number,
         required: false 
     },
     overtime: {
-        type: String,
+        type: Number,
         required: false 
     },
     type: {
-        type: String,
+        type: Number,
         required: true 
     }
 });
