@@ -1,12 +1,10 @@
 <h2>Shifts</h2>
 <form action="/shifts" method="GET">
-<label>Month</label>
-<input type="number" min="1" max="12" name="month" value="<%= searchMonth%>"><br>
-<label>Year</label>
-<input type="number" min="1" max="3000" name="year" value="<%= searchYear%>"><br>
+<label>filter</label>
+<input type="number" name="filter" value="<%= searchFilter%>"><br>
 <button type="submit">Show</button>
 </form>
 <br>
 <% shifts.forEach(shift => { %>
-    <div> <%= shift.date %> | <%= shift.arrival %> | <%= shift.departure %> | <%= shift.breakLength %> | <%= shift.type %>  </div>
+    <div> <%= shift.dateString %> | <%= shift.arrivalString %> | <%= shift.departureString %> | <%= shift.breakLengthString %> | <%= shift.type %>  </div>
 <% }) %>
