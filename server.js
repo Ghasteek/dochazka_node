@@ -10,6 +10,7 @@ const bodyParser = require('body-parser');
 const indexRouter = require('./routes/index');
 const monthRouter = require('./routes/month');
 const shiftsRouter = require('./routes/shifts');
+const inventoryRouter = require('./routes/inventory');
 
 
 app.set('view engine', 'ejs');
@@ -29,6 +30,8 @@ db.once('open', () => console.log('Connected to mongoDB...'));
 app.use('/', indexRouter);
 app.use('/month', monthRouter);
 app.use('/shifts', shiftsRouter);
+
+app.use('/inventory', inventoryRouter);
 
 
 app.listen(process.env.PORT || 3000);
