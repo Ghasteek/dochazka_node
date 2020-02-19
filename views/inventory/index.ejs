@@ -1,1 +1,37 @@
-inventory
+<div style="width:800px;">
+    <div id="inventory" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="/img/shield.png" title="Mighty shield" draggable="true" ondragstart="drag(event)" onmouseenter="hoverSlot(event)" onmouseleave="offHoverSlot(event)" id="offhand" class="item" ondrop="switchItem(event)" ondragover="allowSwitch(event)">
+        <img src="/img/axe.png" title="Unavoidable axe" draggable="true" ondragstart="drag(event)" onmouseenter="hoverSlot(event)" onmouseleave="offHoverSlot(event)" id="weapon" class="item" ondrop="switchItem(event)" ondragover="allowSwitch(event)">
+        <img src="/img/helmet.png" title="Helmet of visdom" draggable="true" ondragstart="drag(event)" onmouseenter="hoverSlot(event)" onmouseleave="offHoverSlot(event)" id="helmet" class="item" ondrop="switchItem(event)" ondragover="allowSwitch(event)">
+        <img src="/img/armor.png" title="Shiny armor" draggable="true" ondragstart="drag(event)" onmouseenter="hoverSlot(event)" onmouseleave="offHoverSlot(event)" id="armor" class="item" ondrop="switchItem(event)" ondragover="allowSwitch(event)">
+        <img src="/img/armor2.png" title="Shiny red armor" draggable="true" ondragstart="drag(event)" onmouseenter="hoverSlot(event)" onmouseleave="offHoverSlot(event)" id="armor2" class="item" ondrop="switchItem(event)" ondragover="allowSwitch(event)">
+        <img src="/img/gloves.png" title="Dragon's gloves" draggable="true" ondragstart="drag(event)" onmouseenter="hoverSlot(event)" onmouseleave="offHoverSlot(event)" id="gloves" class="item" ondrop="switchItem(event)" ondragover="allowSwitch(event)">
+        <img src="/img/neackles.png" title="Neackles of Malfurion" draggable="true" ondragstart="drag(event)" onmouseenter="hoverSlot(event)" onmouseleave="offHoverSlot(event)" id="neackles" class="item" ondrop="switchItem(event)" ondragover="allowSwitch(event)">
+        <img src="/img/belt.png" title="Utility belt" draggable="true" ondragstart="drag(event)" onmouseenter="hoverSlot(event)" onmouseleave="offHoverSlot(event)" id="belt" class="item" ondrop="switchItem(event)" ondragover="allowSwitch(event)">
+        <img src="/img/shoes.png" title="7 miles shoes" draggable="true" ondragstart="drag(event)" onmouseenter="hoverSlot(event)" onmouseleave="offHoverSlot(event)" id="shoes" class="item" ondrop="switchItem(event)" ondragover="allowSwitch(event)">
+    </div>
+    <div class="equippedContainer">
+        <div class="column">
+            <div id="helmetSlot" title="Helmet" class="slot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="armorSlot" title="Armor" class="slot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="glovesSlot" title="Gloves" class="slot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="column">
+            <div id="figure" class="figure"></div>
+        </div>
+        <div class="column">
+            <div id="neacklesSlot" title="Neackles" class="slot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="beltSlot" title="Belt" class="slot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="shoesSlot" title="Shoes" class="slot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            
+        </div>
+        <div class="column"></div>
+        <div class="row">
+            <div id="weaponSlot" title="Main hand" class="slot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="offhandSlot" title="Off hand" class="slot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="column"></div>
+    </div>
+</div>
+
+<script src="/scripts/inventory.js"></script>

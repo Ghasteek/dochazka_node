@@ -1,0 +1,58 @@
+/* style of inventory window */
+#inventory {
+    float: right;
+    width: 250px;
+    height: 490px;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: bisque;
+  }
+
+.equippedContainer {
+    display: grid;
+    background-color: grey;
+    padding: 10px 0 10px 0;
+    width: 484px;
+    grid: 400px / 92px 300px 92px;
+}
+
+.column {
+    display: grid;
+    grid: auto / auto;
+}
+
+.row {
+    display: grid;
+    grid: auto / auto auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.figure {
+    background-image: url("../img/man.png");
+    width: 300px;
+    height: 400px;
+}
+
+/* style of slot window */
+.slot {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    /* padding: 10px; */
+    border: 1px solid black;
+    background-color: white;
+}
+
+/* style of item */
+.item {
+    width: 50px;
+    height: 50px;
+    cursor: grab;
+    margin: 10px;
+}
+
+/* style of slot possible to drop item to */
+.slotHover {
+    background-color: gold;
+}

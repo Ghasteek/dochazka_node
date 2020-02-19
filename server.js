@@ -19,6 +19,7 @@ app.set ('layout', 'layouts/layout');
 app.use(expressLayouts);
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: false}));
+app.use(express.static(__dirname + '/public')); // link "public" directory to root of web, so it can be used in html to link IMG, CSS, JS and others...
 
 const mongoose = require('mongoose');
 mongoose.connect(process.env.DATABASE_URL, { useUnifiedTopology: true, useNewUrlParser: true });
