@@ -11,6 +11,7 @@ const indexRouter = require('./routes/index');
 const monthRouter = require('./routes/month');
 const shiftsRouter = require('./routes/shifts');
 const inventoryRouter = require('./routes/inventory');
+const itemsRouter = require('./routes/items');
 
 
 app.set('view engine', 'ejs');
@@ -33,6 +34,7 @@ app.use('/month', monthRouter);
 app.use('/shifts', shiftsRouter);
 
 app.use('/inventory', inventoryRouter);
+app.use('/items', itemsRouter);
 
 
 app.listen(process.env.PORT || 3000);

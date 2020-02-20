@@ -1,0 +1,12 @@
+<h2>Add item into inventory</h2>
+<form action="/inventory" method="POST">
+    <%- include('_form_fields.ejs') %>
+    <a href="/inventory/add">Cancel</a>
+    <button type="submit">Add Item</button>
+</form>
+
+<br><br>
+
+<% inventory.forEach(item => { %>
+    <div>User: <%= item.user %> | Item: <%= item.item %> | Multiple: <%= item.multiple %>  </div>
+<% }) %>

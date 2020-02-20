@@ -56,3 +56,12 @@
 .slotHover {
     background-color: gold;
 }
+
+table { 
+    border-collapse: collapse; 
+    border: solid thin; 
+}
+tr:nth-child(2n+1) { 
+    border: solid thin; 
+    background-color: lightgrey;
+}

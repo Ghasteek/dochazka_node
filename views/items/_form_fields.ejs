@@ -1,0 +1,37 @@
+<label>Id:</label>
+<input type="number" name="id" value="<%= item.id %>"><br>
+<label>Name:</label>
+<input type="text" name="name" value="<%= item.name %>"><br>
+<label>Description:</label>
+<input type="text" name="description" value="<%= item.description %>"><br>
+<label>Image:</label>
+<select name="image" size="1">
+    <option value="helmet">Helmet
+    <option value="armor">Armor
+    <option value="armor2">Armor2
+    <option value="gloves">Gloves
+    <option value="neackles">Neackles
+    <option value="belt">Belt
+    <option value="shoes">Shoes
+    <option value="axe">Axe
+    <option value="shield">Shield
+</select><br>
+<label>Slot:</label>
+<select name="slot" size="1">
+    <option value="helmet">Helmet
+    <option value="armor">Armor
+    <option value="gloves">Gloves
+    <option value="neackles">Neackles
+    <option value="belt">Belt
+    <option value="shoes">Shoes
+    <option value="weapon">Main hand
+    <option value="offhand">Off hand
+</select><br>
+<label>Attack:</label>
+<input type="number" name="attack" min="0" value="<%= item.attack %>"><br>
+<label>Armor:</label>
+<input type="number" name="armor" min="0" value="<%= item.armor %>"><br>
+<label>Strength:</label>
+<input type="number" name="strength" min="0" value="<%= item.strength %>"><br>
+<label>Vitality:</label>
+<input type="number" name="vitality" min="0" value="<%= item.vitality %>"><br>

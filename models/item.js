@@ -22,6 +22,10 @@ const itemSchema = new mongoose.Schema({
         type: String,
         required: true 
     },
+    attack: {
+        type: Number,
+        required: false 
+    },
     armor: {
         type: Number,
         required: true 

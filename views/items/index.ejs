@@ -1,0 +1,17 @@
+<h2>Shifts</h2>
+<form action="/shifts" method="GET">
+<label>filter</label>
+<input type="number" name="filter" value="<%= searchFilter%>"><br>
+<button type="submit">Show</button>
+</form>
+<br>
+<table>
+    <tr><th>Id</th><th>Icon</th><th>Item atributes</th></tr>
+<% items.forEach(item => { %>
+    <tr>
+        <td><%= item.id %></td>
+        <td><img src="/img/<%= item.image %>.png" title="<%= item.name %> - Attack: <%= item.attack %>,Armor: <%= item.armor %>, Strength: <%= item.strength %>, Vitality: <%= item.vitality %>" id="<%= item.slot %><%= item.id %>" class="item" ></td>
+        <td><%= item.name %> <br> Attack: <%= item.attack %> <br> Armor: <%= item.armor %> <br> Strength: <%= item.strength %> <br> Vitality: <%= item.vitality %></td>
+    </tr>
+<% }) %>
+</table>
